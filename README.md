@@ -1,5 +1,11 @@
 # UniqueNetwork repository with examples of usage [Subsquid processor](https://docs.subsquid.io/develop-a-squid/squid-processor/configuration/).
 
+## Requirements
+
+- NodeJS 14 or later.
+- Docker engine
+- Docker Compose
+
 ## Prepare environment
 
 First of all you should start docker container with PostgreSQL.
@@ -8,12 +14,15 @@ First of all you should start docker container with PostgreSQL.
 
 PostgreSQL is a part of Subsquid processor architecture and use for save scan state.
 
+Install npm dependencies.
 
-## Scan UNIQUE tokens
+`npm install`
+
+## Scan Unique tokens
 
 We have build simple example for demonstrate how to scan tokens from blockchain.
 
-In our example you can see [SDK](https://docs.uniquenetwork.dev/sdk/). It's out toolkit for call blockchain API by easy way.
+In our example you can see [SDK](https://docs.unique.network/sdk-docs/). It's out toolkit for call blockchain API by easy way.
 
 You can try it by running:
 
@@ -64,3 +73,5 @@ async function catchCreatedToken(ctx: EventHandlerContext<Store>, sdk: Sdk) {
 }
 ```
 
+Full list of events you can find in the [events.ts](events.ts) file.
+Events params documentation is in progress, but right now you can try to review events and it's params at [link](https://archive.unique.network/opal/explorer/graphql) to firesquid GraphQL.
