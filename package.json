@@ -1,0 +1,26 @@
+{
+  "name": "archive-processor-example",
+  "version": "1.0.0",
+  "scripts": {
+    "environment:up": "docker-compose --env-file .env up -d",
+    "environment:start": "docker-compose --env-file .env start",
+    "environment:stop": "docker-compose --env-file .env stop",
+    "environment:down": "docker-compose --env-file .env down",
+    "tokens-processor": "ts-node tokens-processor"
+  },
+  "dependencies": {
+    "@subsquid/substrate-processor": "^1.8.0",
+    "@subsquid/typeorm-store": "^0.1.3",
+    "@unique-nft/opal-testnet-types": "^0.5.3",
+    "@unique-nft/quartz-mainnet-types": "^0.6.1",
+    "@unique-nft/substrate-client": "^0.5.6",
+    "@unique-nft/types": "^0.6.0-4",
+    "dotenv": "^16.0.2",
+    "pg": "^8.8.0",
+    "typeorm": "^0.3.9"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.3"
+  }
+}

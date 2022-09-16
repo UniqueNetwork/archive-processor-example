@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  processors-database:
+    image: postgres:14.2-alpine
+    container_name: processors-database
+    env_file:
+      - .env
+    environment:
+      - TZ=Europe/Moscow
+      - PGTZ=Europe/Moscow
+    ports:
+      - '5432:5432'
+    volumes:
+      - processors-pgdata:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro
+
+volumes:
+  processors-pgdata:
+    external: false
